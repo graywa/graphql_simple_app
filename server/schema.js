@@ -3,26 +3,26 @@ const { buildSchema } = require('graphql')
 const schema = buildSchema(`
   type User {
     id: ID
-    username: String
-    age: Int
+    name: String
+    salary: Int
     posts: [Post]
   }
   type Post {
     id: ID
     title: String
-    content: String
+    body: String
   }
 
   input UserInput {
     id: ID
-    username: String!
-    age: Int!
+    name: String!
+    salary: Int!
     posts: [PostInput]
   }
   input PostInput {
     id: ID
     title: String!
-    content: String!
+    body: String!
   }
   
   type Query {

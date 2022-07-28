@@ -3,7 +3,10 @@ const { graphqlHTTP } = require('express-graphql')
 const cors = require('cors')
 const schema = require('./schema')
 
-const users = [{ id: 1, username: 'vlad', age: 33 }]
+const users = [
+  { id: 1, name: 'vlad', salary: 33 },
+  { id: 2, name: 'sveta', salary: 66 },
+]
 
 const app = express()
 app.use(cors())
